@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { ChevronDownIcon } from "@heroicons/react/24/solid"; // Importing the icon
 
-const Accordion = ({ title, content ,isButton }) => {
+const Accordion = ({ title, content, isButton, index }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -10,14 +10,19 @@ const Accordion = ({ title, content ,isButton }) => {
       {/* Accordion Header */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full flex justify-between items-center py-4 text-lg md:text-2xl text-black"
+        className="w-full flex justify-between items-center text-left py-4 text-lg md:text-2xl text-black"
       >
-        {title}
-        <ChevronDownIcon
-          className={`transition-transform duration-300 w-4 md:w-8 ${
-            isOpen ? "rotate-180" : ""
-          }`}
-        />
+        <p className="flex gap-2">
+          <span>{index + 1}.</span>
+          {title}
+        </p>
+        <span className="">
+          <ChevronDownIcon
+            className={`transition-transform duration-300 w-4 md:w-8 ${
+              isOpen ? "rotate-180" : ""
+            }`}
+          />
+        </span>
       </button>
 
       {/* Accordion Content (Height Transition) */}

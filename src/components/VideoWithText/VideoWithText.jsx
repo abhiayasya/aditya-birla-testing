@@ -16,7 +16,7 @@ const VideoWithText = () => {
 
   return (
     <div className="flex items-center justify-center py-8 bg-gray-100">
-      <div className="flex flex-col-reverse md:flex-row justify-between w-full">
+      <div className="flex flex-col-reverse md:flex-row justify-between w-full items-center">
         {/* Text Section */}
         <div className="w-full md:w-1/2 flex flex-col justify-between py-14 space-y-8">
           <img src="/quotes.svg" alt="image" className="w-8 -scale-x-90" />
@@ -36,10 +36,10 @@ const VideoWithText = () => {
         </div>
 
         {/* Video Section */}
-        <div className="w-full md:w-1/3 relative bg-gray-200 rounded-3xl overflow-hidden ">
+        <div className="w-full md:w-2/5 relative bg-gray-200 rounded-3xl overflow-hidden ">
           <video
             ref={videoRef}
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover aspect-video"
             controls={isPlaying}
             poster="https://via.placeholder.com/600x400" // Placeholder image
           >

@@ -5,12 +5,13 @@ import AdvantageCard from "@/components/Card/AdvantageCard";
 import Customcard from "@/components/Card/CustomCard";
 import HoverDetailCard from "@/components/Card/HoverDetailCard";
 import Card from "@/components/Card/IconCard";
-import Button from "@/components/CTA/Button";
+// import Button from "@/components/CTA/Button";
 import Heading from "@/components/Heading/Heading";
 import HeroBanner from "@/components/HeroBanner/HeroBanner";
 import FinancialLiteracy from "@/components/ImageWithDescripton/FinancialLiteracy";
 import { MainContainer } from "@/components/MainContainer/MainContainer";
 import Slider from "@/components/Slider/Slider";
+import SuccessStoryCard from "@/components/Slider/SuccessStoryCard";
 import StepperDetails from "@/components/StepperDetail/StepperDetail";
 import VideoWithText from "@/components/VideoWithText/VideoWithText";
 import { accordionData, AdvantageCardData, HoverDetailCardSection, StepperDetailsData } from "@/constants/constant";
@@ -28,12 +29,12 @@ export default function Home() {
       </MainContainer>
       <MainContainer>
         <section className=" flex flex-col max-w-[1280px] mx-auto items-center justify-center">
-          <div className="space-y-8 text-center w-full md:w-2/3 lg:w-1/2">
+          <div className="text-center w-full md:w-2/3 lg:w-1/2 relative py-8">
             <Heading
               boldText="Financial Literacy Program!"
               regularText="About our "
             />
-            <p>
+            <p className="text-base text-zinc-500 mt-8">
               At ABC, we believe that financial literacy is the foundation of
               financial well- being. Understanding how to manage money effectively
               can lead to better financial decisions, reduced stress, and
@@ -41,8 +42,14 @@ export default function Home() {
               learns differently, and thats why we have designed a diverse and
               inclusive learning experience to suit every preference and need.
             </p>
+            <button className="border border-zinc-800 font-semibold px-6 py-2 max-md:mx-4 max-md:mt-8 rounded-full lg:absolute mt-0 top-0 -left-32">Finance</button>
+            <button className="border border-zinc-800 font-semibold px-6 py-2 max-md:mx-4 max-md:mt-8 rounded-full lg:absolute mt-0 top-[50%] -left-40">Finance</button>
+            <button className="border border-zinc-800 font-semibold px-6 py-2 max-md:mx-4 max-md:mt-8 rounded-full lg:absolute mt-0 top-[100%] -left-32">Finance</button>
+            <button className="border border-zinc-800 font-semibold px-6 py-2 max-md:mx-4 max-md:mt-8 rounded-full lg:absolute mt-0 top-0 -right-32">Finance</button>
+            <button className="border border-zinc-800 font-semibold px-6 py-2 max-md:mx-4 max-md:mt-8 rounded-full lg:absolute mt-0 top-[50%] -right-40">Finance</button>
+            <button className="border border-zinc-800 font-semibold px-6 py-2 max-md:mx-4 max-md:mt-8 rounded-full lg:absolute mt-0 top-[100%] -right-32">Finance</button>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 max-w-[1440px] place-items-center w-full mx-auto pt-20">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 max-w-[1440px] place-items-center w-full mx-auto pt-28">
             {[1, 1, 1, 1, 1].map((item, index) => {
               return (
                 <Card
@@ -86,7 +93,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
             {
               _map(accordionData, (item, index) => {
-                return <Accordion key={index} title={`${index + 1}. ${item.title}`} isButton={true}
+                return <Accordion key={index} index={index} title={item.title} isButton={true}
                   content={item.content} />
               })
             }
@@ -111,6 +118,11 @@ export default function Home() {
           <Customcard />
         </section>
       </MainContainer>
+      <MainContainer className="bg-gray-100">
+        <section className="max-w-[1440px] mx-auto">
+          <SuccessStoryCard/>
+        </section>
+      </MainContainer>
       <MainContainer>
         <section className="">
           <div className="flex justify-between items-center pb-10">
@@ -131,7 +143,7 @@ export default function Home() {
           <div className="grid grid-cols-1 gap-6 md:gap-8 ">
             {
               _map(accordionData.slice(0, 5), (item, index) => {
-                return <Accordion key={index} title={`${index + 1}. ${item.title}`}
+                return <Accordion key={index} title={item.title} index={index}
                   content={item.content} />
               })
             }

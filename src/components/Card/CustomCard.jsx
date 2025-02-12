@@ -1,6 +1,7 @@
 import React from "react";
 import Heading from "../Heading/Heading";
 import Button from "../CTA/Button";
+import SuccessStoryCarousel from "../Slider/CardSlider";
 
 const Customcard = () => {
   const cards_json = {
@@ -45,6 +46,7 @@ const Customcard = () => {
             </p>
           </div> */}
           <Heading
+            className={"text-2xl md:text-4xl"}
             regularText={"Join our Community to"}
             boldText={" Build Wealth with Knowledge"}
           />
@@ -59,12 +61,12 @@ const Customcard = () => {
             {/* <button className="py-4 px-6 bg-[#2a2e34] text-white rounded-full">
               Join our Community Now
             </button> */}
-            <Button title={"Join our Community Now"} className={""}/>
+            <Button title={"Join our Community Now"} className={""} />
           </div>
         </div>
 
-        <div className="community-investment-card w-full">
-          <div className="bg-white p-4 rounded-2xl shadow-md md:w-80 mx-auto">
+        <div className="community-investment-card w-full bg-[#ededf0]">
+          {/* <div className="bg-white p-4 rounded-2xl shadow-md md:w-80 mx-auto">
             <div className="mb-4">
               <h3 className="text-lg text-gray-900">
                 What are the best investment strategies for beginners?
@@ -82,7 +84,8 @@ const Customcard = () => {
                 Respond
               </button>
             </div>
-          </div>
+          </div> */}
+          <SuccessStoryCarousel />
         </div>
       </div>
 
@@ -97,6 +100,7 @@ const Customcard = () => {
             </h2>
           </div> */}
           <Heading
+            className={"text-2xl md:text-4xl"}
             regularText={"Earn Your"}
             boldText={" Financial Literacy Certificate"}
           />
@@ -111,7 +115,7 @@ const Customcard = () => {
             {/* <button className="py-4 px-6 bg-[#2a2e34] text-white rounded-full">
               Join our Community Now
             </button> */}
-            <Button title={"Join our Community Now"} className={""}/>
+            <Button title={"Join our Community Now"} className={""} />
           </div>
         </div>
 

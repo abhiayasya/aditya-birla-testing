@@ -2,7 +2,7 @@ import React from "react";
 
 const SliderCard = () => {
   return (
-    <div className="bg-white rounded-lg overflow-hidden p-6 space-y-6 flex flex-col items-start w-full">
+    <div className="bg-white text-left rounded-lg overflow-hidden p-6 space-y-6 flex flex-col items-start w-full">
       <div className="flex ">
         <div className="bg-zinc-100 rounded-full p-6 w-fit border "></div>
         <div className="bg-zinc-100 rounded-full p-6 w-fit border -ml-6"></div>
