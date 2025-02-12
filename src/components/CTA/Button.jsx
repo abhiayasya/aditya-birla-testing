@@ -13,7 +13,7 @@ const Button = ({ className, title, buttonType }) => {
       {buttonType == "bottomButton" ? (
         // scrollY > 680 ? (
           <button
-            className={`bg-[#2a2e34] text-white px-8 py-4 rounded-full transition-all duration-700 ${scrollY > 680 ? "sticky -translate-y-0 bottom-10 left-20" : "translate-y-40"}  w-fit mx-auto ${className}`}
+            className={`bg-[#2a2e34] text-white px-8 py-4 rounded-full transition-all duration-700 ${scrollY > 680 ? "fixed -translate-y-0 bottom-10 left-32" : "translate-y-40"}  w-fit mx-auto ${className}`}
           >
             {title}
           </button>
