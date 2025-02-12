@@ -56,4 +56,23 @@
     height: 44px;
   }
   
+  .custom-buttons {
+    display: flex;
+    justify-content: space-between;
+    /* height: 200px; */
+    margin-top: 20px;
+  }
+  
+  .swiper-button-prev, .swiper-button-next {
+    padding: 10px 20px;
+    background-color: red;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .swiper-button-prev:hover, .swiper-button-next:hover {
+    background-color: #0056b3;
+  }
   
